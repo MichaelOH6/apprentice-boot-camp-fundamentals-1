@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-class AnimalDeck implements Deck {
+class AnimalDeck extends Deck {
 
-    private List<Card> cards;
 
     AnimalDeck() {
         cards = new ArrayList<>();
@@ -15,12 +14,6 @@ class AnimalDeck implements Deck {
             cards.add(new AnimalCard(animal));
         }
     }
-
-    @Override
-    public void shuffle() {
-        Collections.shuffle(cards);
-    }
-
     @Override
     public String[] getCards() {
         String[] result = new String[cards.size()];

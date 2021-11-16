@@ -1,9 +1,19 @@
 package cards;
 
-public interface Deck {
-    void shuffle();
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
-    String[] getCards();
+public abstract class Deck {
+     List<Card> cards = new ArrayList<>();
 
-    Card deal();
+    public abstract Card deal();
+
+    public abstract String[] getCards();
+
+    public void shuffle(){
+        Collections.shuffle(cards);
+
+    }
 }
