@@ -1,7 +1,9 @@
 package cards;
 
 public interface Deck {
+    void shuffle();
 
     String[] getCards();
-    PlayingCard deals();
+
+    Card deal();
 }
